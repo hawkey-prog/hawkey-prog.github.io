@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 body {
@@ -19,37 +19,37 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.7);
-    z-index: 0;
+    background: url('https://ltdfoto.ru/images/2026/02/05/FON_1.jpg') center/cover;
+    opacity: 0.3;
+    z-index: -1;
 }
 
 .container {
     max-width: 400px;
     margin: 0 auto;
     padding: 0 15px;
-    position: relative;
-    z-index: 1;
 }
 
+/* Шапка */
 .header {
-    padding: 40px 0;
+    padding: 30px 0;
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .profile-card {
-    background: rgba(20,20,20,0.9);
+    background: rgba(20, 20, 20, 0.85);
+    backdrop-filter: blur(10px);
     border-radius: 20px;
-    padding: 30px;
-    margin: 0 auto 30px;
-    max-width: 380px;
-    border: 1px solid rgba(255,255,255,0.1);
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .profile {
     text-align: center;
+    margin-bottom: 25px;
 }
 
 .avatar {
@@ -59,39 +59,48 @@ body::before {
     border: 4px solid #2e7d32;
     object-fit: cover;
     margin-bottom: 20px;
+    transition: transform 0.3s;
 }
 
-.name {
-    color: white;
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 10px;
+.avatar:hover {
+    transform: scale(1.05);
 }
 
-.bio {
+.profile h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.profile p {
     color: #ccc;
-    font-size: 16px;
     line-height: 1.6;
-    margin-bottom: 25px;
+    font-size: 16px;
 }
 
+/* Кнопки */
 .action-buttons {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
 }
 
 .btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 18px;
-    border-radius: 14px;
+    padding: 16px;
+    border-radius: 12px;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 17px;
+    font-weight: 600;
+    font-size: 16px;
     transition: all 0.3s;
-    text-align: center;
+    border: 2px solid transparent;
+}
+
+.btn i {
+    margin-right: 10px;
+    font-size: 20px;
 }
 
 .btn-primary {
@@ -102,72 +111,76 @@ body::before {
 .btn-primary:hover {
     background: #1b5e20;
     transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46, 125, 50, 0.4);
 }
 
 .btn-secondary {
-    background: #333;
+    background: rgba(40, 40, 40, 0.8);
     color: white;
-    border: 1px solid #444;
+    border-color: rgba(255, 255, 255, 0.1);
 }
 
 .btn-secondary:hover {
-    background: #444;
+    background: rgba(60, 60, 60, 0.8);
     transform: translateY(-2px);
 }
 
-.btn i {
-    margin-right: 12px;
-}
-
+/* Основной контент */
 .main-content {
-    padding: 0 0 40px;
+    padding-bottom: 40px;
 }
 
-.content-block {
-    background: rgba(20,20,20,0.9);
+.content-block, .booking-block {
+    background: rgba(20, 20, 20, 0.85);
+    backdrop-filter: blur(10px);
     border-radius: 20px;
     padding: 25px;
-    margin-bottom: 25px;
-    border: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s;
 }
 
-.block-title {
+.content-block:hover, .booking-block:hover {
+    transform: translateY(-5px);
+}
+
+.content-block h2, .booking-block h2 {
     color: #2e7d32;
     font-size: 20px;
-    font-weight: bold;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
 }
 
-.block-title i {
-    margin-right: 12px;
+.content-block h2 i, .booking-block h2 i {
+    margin-right: 10px;
 }
 
-.service-item {
+/* Элементы услуг, FAQ, контактов */
+.service-item, .faq-item, .contact-item {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 20px;
     padding: 15px;
-    background: #222;
-    border-radius: 10px;
+    margin-bottom: 15px;
+    background: rgba(40, 40, 40, 0.6);
+    border-radius: 12px;
     border-left: 4px solid #2e7d32;
 }
 
-.service-icon {
+.service-icon, .faq-icon, .contact-icon {
     color: #2e7d32;
     margin-right: 15px;
     font-size: 20px;
+    margin-top: 3px;
 }
 
-.service-text {
-    color: #ddd;
-    line-height: 1.6;
+.service-text, .faq-text, .contact-text {
+    flex: 1;
 }
 
-.service-text strong {
-    color: white;
+.service-text strong, .faq-text strong, .contact-text strong {
     display: block;
+    color: #fff;
     margin-bottom: 5px;
 }
 
@@ -175,52 +188,105 @@ body::before {
     color: #4caf50;
     font-weight: bold;
     display: block;
+    margin: 5px 0 10px;
+}
+
+.service-text, .faq-text {
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.contact-text a {
+    color: #4caf50;
+    text-decoration: none;
+    display: block;
     margin: 5px 0;
 }
 
-.footer-section {
-    padding: 40px 0;
-    text-align: center;
-    border-top: 1px solid #333;
-}
-
-.footer-text {
+.contact-text span {
     color: #888;
     font-size: 14px;
+    display: block;
+    margin-top: 5px;
 }
 
-.footer-text a {
-    color: #2e7d32;
-    text-decoration: none;
+/* Шаги процесса */
+.work-step {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: rgba(40, 40, 40, 0.6);
+    border-radius: 12px;
 }
 
-.footer-text a:hover {
-    text-decoration: underline;
+.step-number {
+    width: 36px;
+    height: 36px;
+    background: #2e7d32;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.step-text {
+    flex: 1;
+}
+
+.step-text strong {
+    color: #fff;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.step-text {
+    color: #ccc;
+}
+
+/* Блок бронирования */
+.booking-block {
+    text-align: center;
+}
+
+.booking-block p {
+    color: #ccc;
+    margin-bottom: 20px;
+    line-height: 1.5;
 }
 
 .booking-btn {
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 30px;
     background: #2e7d32;
     color: white;
-    padding: 18px;
-    border-radius: 14px;
     text-decoration: none;
-    font-weight: bold;
+    border-radius: 12px;
+    font-weight: 600;
     font-size: 17px;
-    text-align: center;
-    margin-top: 20px;
     transition: all 0.3s;
+    border: none;
+    cursor: pointer;
 }
 
 .booking-btn:hover {
     background: #1b5e20;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(46, 125, 50, 0.4);
 }
 
 .booking-btn i {
     margin-right: 12px;
+    font-size: 20px;
 }
 
+/* Социальные иконки */
 .social-links {
     display: flex;
     justify-content: center;
@@ -232,7 +298,7 @@ body::before {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: #333;
+    background: rgba(40, 40, 40, 0.8);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -240,6 +306,7 @@ body::before {
     font-size: 22px;
     text-decoration: none;
     transition: all 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .social-icon:hover {
@@ -247,13 +314,39 @@ body::before {
     transform: scale(1.1);
 }
 
+/* Подвал */
+.footer-section {
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(15, 15, 15, 0.8);
+}
+
+.footer-section p {
+    color: #888;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.footer-section a {
+    color: #4caf50;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+/* Адаптивность */
 @media (max-width: 480px) {
     .container {
         padding: 0 12px;
     }
     
-    .profile-card {
-        padding: 25px;
+    .profile-card,
+    .content-block,
+    .booking-block {
+        padding: 20px;
     }
     
     .avatar {
@@ -261,12 +354,18 @@ body::before {
         height: 120px;
     }
     
-    .name {
-        font-size: 28px;
+    .profile h1 {
+        font-size: 24px;
     }
     
     .btn, .booking-btn {
-        padding: 16px;
-        font-size: 16px;
+        padding: 14px;
+        font-size: 15px;
+    }
+    
+    .social-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
     }
 }
