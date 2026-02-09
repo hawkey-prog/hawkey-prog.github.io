@@ -376,14 +376,14 @@ body {
 }
 
 .footer-section a {
-    color: #32cd32;
+    color: #90ee90;
     text-decoration: none;
     transition: all 0.3s;
 }
 
 .footer-section a:hover {
-    color: #00ff00;
-    text-shadow: 0 0 10px #00ff00;
+    color: #ffffff;  
+    text-shadow: 0 0 5px #90ee90;
 }
 
 /* Адаптивность */
