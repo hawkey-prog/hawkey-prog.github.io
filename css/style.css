@@ -6,22 +6,10 @@
 }
 
 body {
-    background: #000;
-    color: #fff;
+    background: #ffffff;
+    color: #1b5e20;
     min-height: 100vh;
-    position: relative;
-}
-
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('https://ltdfoto.ru/images/2026/02/05/FON_1.jpg') center/cover;
-    opacity: 0.3;
-    z-index: -1;
+    line-height: 1.6;
 }
 
 .container {
@@ -39,12 +27,10 @@ body::before {
 }
 
 .profile-card {
-    background: rgba(20, 20, 20, 0.85);
-    backdrop-filter: blur(10px);
+    background: #1b5e20;
     border-radius: 20px;
     padding: 25px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 30px rgba(27, 94, 32, 0.2);
 }
 
 .profile {
@@ -56,7 +42,7 @@ body::before {
     width: 140px;
     height: 140px;
     border-radius: 50%;
-    border: 4px solid #2e7d32;
+    border: 4px solid #ffffff;
     object-fit: cover;
     margin-bottom: 20px;
     transition: transform 0.3s;
@@ -69,11 +55,11 @@ body::before {
 .profile h1 {
     font-size: 28px;
     margin-bottom: 15px;
-    color: #fff;
+    color: #ffffff;
 }
 
 .profile p {
-    color: #ccc;
+    color: #e8f5e9;
     line-height: 1.6;
     font-size: 16px;
 }
@@ -104,24 +90,24 @@ body::before {
 }
 
 .btn-primary {
-    background: #2e7d32;
-    color: white;
+    background: #ffffff;
+    color: #1b5e20;
 }
 
 .btn-primary:hover {
-    background: #1b5e20;
+    background: #f1f8e9;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(46, 125, 50, 0.4);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .btn-secondary {
-    background: rgba(40, 40, 40, 0.8);
+    background: #2e7d32;
     color: white;
-    border-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .btn-secondary:hover {
-    background: rgba(60, 60, 60, 0.8);
+    background: #1b5e20;
     transform: translateY(-2px);
 }
 
@@ -131,12 +117,11 @@ body::before {
 }
 
 .content-block, .booking-block {
-    background: rgba(20, 20, 20, 0.85);
-    backdrop-filter: blur(10px);
+    background: #1b5e20;
     border-radius: 20px;
     padding: 25px;
     margin-bottom: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 20px rgba(27, 94, 32, 0.15);
     transition: transform 0.3s;
 }
 
@@ -145,7 +130,7 @@ body::before {
 }
 
 .content-block h2, .booking-block h2 {
-    color: #2e7d32;
+    color: #ffffff;
     font-size: 20px;
     margin-bottom: 20px;
     display: flex;
@@ -162,13 +147,13 @@ body::before {
     align-items: flex-start;
     padding: 15px;
     margin-bottom: 15px;
-    background: rgba(40, 40, 40, 0.6);
+    background: #2e7d32;
     border-radius: 12px;
-    border-left: 4px solid #2e7d32;
+    border-left: 4px solid #4caf50;
 }
 
 .service-icon, .faq-icon, .contact-icon {
-    color: #2e7d32;
+    color: #ffffff;
     margin-right: 15px;
     font-size: 20px;
     margin-top: 3px;
@@ -176,35 +161,36 @@ body::before {
 
 .service-text, .faq-text, .contact-text {
     flex: 1;
+    color: #ffffff;
 }
 
 .service-text strong, .faq-text strong, .contact-text strong {
     display: block;
-    color: #fff;
+    color: #ffffff;
     margin-bottom: 5px;
 }
 
 .price {
-    color: #4caf50;
+    color: #c8e6c9;
     font-weight: bold;
     display: block;
     margin: 5px 0 10px;
 }
 
 .service-text, .faq-text {
-    color: #ccc;
+    color: #e8f5e9;
     line-height: 1.5;
 }
 
 .contact-text a {
-    color: #4caf50;
+    color: #c8e6c9;
     text-decoration: none;
     display: block;
     margin: 5px 0;
 }
 
 .contact-text span {
-    color: #888;
+    color: #a5d6a7;
     font-size: 14px;
     display: block;
     margin-top: 5px;
@@ -216,19 +202,20 @@ body::before {
     align-items: center;
     padding: 15px;
     margin-bottom: 15px;
-    background: rgba(40, 40, 40, 0.6);
+    background: #2e7d32;
     border-radius: 12px;
+    border-left: 4px solid #4caf50;
 }
 
 .step-number {
     width: 36px;
     height: 36px;
-    background: #2e7d32;
+    background: #ffffff;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: #1b5e20;
     font-weight: bold;
     margin-right: 15px;
     flex-shrink: 0;
@@ -236,25 +223,23 @@ body::before {
 
 .step-text {
     flex: 1;
+    color: #ffffff;
 }
 
 .step-text strong {
-    color: #fff;
+    color: #ffffff;
     display: block;
     margin-bottom: 5px;
-}
-
-.step-text {
-    color: #ccc;
 }
 
 /* Блок бронирования */
 .booking-block {
     text-align: center;
+    background: #1b5e20;
 }
 
 .booking-block p {
-    color: #ccc;
+    color: #e8f5e9;
     margin-bottom: 20px;
     line-height: 1.5;
 }
@@ -264,8 +249,8 @@ body::before {
     align-items: center;
     justify-content: center;
     padding: 18px 30px;
-    background: #2e7d32;
-    color: white;
+    background: #ffffff;
+    color: #1b5e20;
     text-decoration: none;
     border-radius: 12px;
     font-weight: 600;
@@ -276,9 +261,9 @@ body::before {
 }
 
 .booking-btn:hover {
-    background: #1b5e20;
+    background: #f1f8e9;
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(46, 125, 50, 0.4);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .booking-btn i {
@@ -298,7 +283,7 @@ body::before {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: rgba(40, 40, 40, 0.8);
+    background: #1b5e20;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -306,11 +291,12 @@ body::before {
     font-size: 22px;
     text-decoration: none;
     transition: all 0.3s;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 2px solid #1b5e20;
 }
 
 .social-icon:hover {
-    background: #2e7d32;
+    background: #ffffff;
+    color: #1b5e20;
     transform: scale(1.1);
 }
 
@@ -318,19 +304,20 @@ body::before {
 .footer-section {
     padding: 30px 0;
     text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    background: rgba(15, 15, 15, 0.8);
+    background: #f1f8e9;
+    border-top: 1px solid #c8e6c9;
 }
 
 .footer-section p {
-    color: #888;
+    color: #2e7d32;
     margin-bottom: 8px;
     font-size: 14px;
 }
 
 .footer-section a {
-    color: #4caf50;
+    color: #1b5e20;
     text-decoration: none;
+    font-weight: 500;
 }
 
 .footer-section a:hover {
@@ -367,5 +354,9 @@ body::before {
         width: 45px;
         height: 45px;
         font-size: 20px;
+    }
+    
+    .content-block h2, .booking-block h2 {
+        font-size: 18px;
     }
 }
