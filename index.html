@@ -184,10 +184,8 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Обновление года
             document.getElementById('current-year').textContent = new Date().getFullYear();
             
-            // Плавная прокрутка
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
