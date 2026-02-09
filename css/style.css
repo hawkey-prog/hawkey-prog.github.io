@@ -20,8 +20,8 @@ body {
 
 /* Шапка */
 .header {
-    padding: 30px 0;
-    min-height: 100vh;
+    padding: 20px 0; /* Уменьшено с 30px */
+    min-height: auto; /* Убрано 100vh */
     display: flex;
     align-items: center;
     background: #ffffff;
@@ -32,6 +32,7 @@ body {
     border-radius: 20px;
     padding: 25px;
     box-shadow: 0 10px 30px rgba(27, 94, 32, 0.2);
+    margin-top: 20px; /* Добавлено */
 }
 
 .profile {
@@ -115,6 +116,7 @@ body {
 .main-content {
     padding-bottom: 40px;
     background: #ffffff;
+    margin-top: 0; /* Убрано лишнее пространство */
 }
 
 .content-block, .booking-block {
