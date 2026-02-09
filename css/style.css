@@ -1,4 +1,3 @@
-/* Базовые стили */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +6,7 @@
 }
 
 body {
-    background-color: #000000;
+    background-color: #000;
     color: #333;
     min-height: 100vh;
     position: relative;
@@ -21,9 +20,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: 
-        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
-        url('https://ltdfoto.ru/images/2026/02/05/FON_1.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://ltdfoto.ru/images/2026/02/05/FON_1.jpg') center/cover no-repeat;
     opacity: 0.5;
     z-index: 0;
     pointer-events: none;
@@ -38,8 +35,9 @@ body::before {
     z-index: 1;
 }
 
+/* Шапка */
 .header {
-    padding: 40px 0 30px 0;
+    padding: 40px 0 30px;
     text-align: center;
     position: relative;
     min-height: 100vh;
@@ -55,41 +53,16 @@ body::before {
 }
 
 .profile-card {
-    background: rgba(15, 15, 15, 0.85);
+    background: rgba(15,15,15,0.85);
     backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
     border-radius: 20px;
     padding: 30px 25px;
     margin: 0 auto 30px;
     max-width: 380px;
-    box-shadow: 
-        0 15px 35px rgba(0, 0, 0, 0.7),
-        inset 0 1px 0 rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
     position: relative;
     overflow: hidden;
-}
-
-.profile-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        45deg,
-        transparent 30%,
-        rgba(46, 125, 50, 0.08) 50%,
-        transparent 70%
-    );
-    z-index: 0;
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-
-.profile-card:hover::before {
-    opacity: 1;
 }
 
 .profile {
@@ -102,22 +75,18 @@ body::before {
     width: 140px;
     height: 140px;
     border-radius: 50%;
-    border: 4px solid rgba(255, 255, 255, 0.2);
+    border: 4px solid rgba(255,255,255,0.2);
     object-fit: cover;
     margin-bottom: 20px;
-    box-shadow: 
-        0 10px 30px rgba(0, 0, 0, 0.6),
-        0 0 0 1px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.1);
     background-color: #1a1a1a;
     transition: all 0.4s ease;
 }
 
 .avatar:hover {
     transform: scale(1.05);
-    border-color: rgba(46, 125, 50, 0.4);
-    box-shadow: 
-        0 15px 40px rgba(46, 125, 50, 0.3),
-        0 0 0 1px rgba(255, 255, 255, 0.2);
+    border-color: rgba(46,125,50,0.4);
+    box-shadow: 0 15px 40px rgba(46,125,50,0.3), 0 0 0 1px rgba(255,255,255,0.2);
 }
 
 .name {
@@ -125,15 +94,15 @@ body::before {
     font-size: 32px;
     font-weight: 800;
     margin-bottom: 10px;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.8);
 }
 
 .bio {
-    color: rgba(255, 255, 255, 0.95);
+    color: rgba(255,255,255,0.95);
     font-size: 16px;
     line-height: 1.7;
     margin-bottom: 25px;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 1px 3px rgba(0,0,0,0.6);
     padding: 0 5px;
 }
 
@@ -154,32 +123,11 @@ body::before {
     font-weight: 700;
     font-size: 17px;
     transition: all 0.4s ease;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    box-shadow: 
-        0 6px 20px rgba(0, 0, 0, 0.5),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
     border: 2px solid transparent;
     position: relative;
     overflow: hidden;
     z-index: 1;
-}
-
-.btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
-    transition: left 0.6s;
-    z-index: -1;
-}
-
-.btn:hover::before {
-    left: 100%;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1);
 }
 
 .btn-primary {
@@ -189,25 +137,21 @@ body::before {
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 
-        0 12px 30px rgba(46, 125, 50, 0.5),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 12px 30px rgba(46,125,50,0.5), inset 0 1px 0 rgba(255,255,255,0.2);
+    border-color: rgba(255,255,255,0.2);
 }
 
 .btn-secondary {
-    background: linear-gradient(135deg, rgba(45, 45, 45, 0.9), rgba(35, 35, 35, 0.9));
+    background: linear-gradient(135deg, rgba(45,45,45,0.9), rgba(35,35,35,0.9));
     color: white;
-    border: 2px solid rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255,255,255,0.15);
 }
 
 .btn-secondary:hover {
     transform: translateY(-3px);
-    box-shadow: 
-        0 12px 30px rgba(0, 0, 0, 0.6),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.25);
-    background: linear-gradient(135deg, rgba(55, 55, 55, 0.9), rgba(45, 45, 45, 0.9));
+    box-shadow: 0 12px 30px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.2);
+    border-color: rgba(255,255,255,0.25);
+    background: linear-gradient(135deg, rgba(55,55,55,0.9), rgba(45,45,45,0.9));
 }
 
 .btn i {
@@ -215,33 +159,27 @@ body::before {
     font-size: 22px;
 }
 
+/* Основной контент */
 .main-content {
-    padding: 0 0 20px 0;
+    padding: 0 0 20px;
     position: relative;
     z-index: 1;
 }
 
 .content-block {
-    background: rgba(20, 20, 20, 0.85);
+    background: rgba(20,20,20,0.85);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     border-radius: 20px;
     padding: 25px;
     margin-bottom: 25px;
-    box-shadow: 
-        0 10px 30px rgba(0, 0, 0, 0.6),
-        inset 0 1px 0 rgba(255, 255, 255, 0.05),
-        0 0 0 1px rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.05), 0 0 0 1px rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
     transition: all 0.3s ease;
 }
 
 .content-block:hover {
     transform: translateY(-5px);
-    box-shadow: 
-        0 15px 40px rgba(0, 0, 0, 0.8),
-        inset 0 1px 0 rgba(255, 255, 255, 0.05),
-        0 0 0 1px rgba(255, 255, 255, 0.15);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.8), inset 0 1px 0 rgba(255,255,255,0.05), 0 0 0 1px rgba(255,255,255,0.15);
 }
 
 .block-title {
@@ -257,7 +195,6 @@ body::before {
     margin-right: 12px;
     color: #2e7d32;
     font-size: 22px;
-    text-shadow: 0 0 8px rgba(46, 125, 50, 0.4);
 }
 
 .service-item, .faq-item, .contact-item {
@@ -265,7 +202,7 @@ body::before {
     align-items: flex-start;
     margin-bottom: 18px;
     padding: 15px;
-    background: rgba(40, 40, 40, 0.6);
+    background: rgba(40,40,40,0.6);
     border-radius: 16px;
     border-left: 4px solid #2e7d32;
     transition: all 0.3s ease;
@@ -273,8 +210,8 @@ body::before {
 
 .service-item:hover, .faq-item:hover, .contact-item:hover {
     transform: translateX(3px);
-    background: rgba(50, 50, 50, 0.7);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    background: rgba(50,50,50,0.7);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
 
 .service-item:last-child, .faq-item:last-child, .contact-item:last-child {
@@ -286,7 +223,6 @@ body::before {
     color: #2e7d32;
     margin-top: 3px;
     font-size: 20px;
-    text-shadow: 0 0 6px rgba(46, 125, 50, 0.3);
     flex-shrink: 0;
 }
 
@@ -326,7 +262,7 @@ body::before {
 }
 
 .contact-sub {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255,255,255,0.7);
     font-size: 14px;
     margin-top: 3px;
     display: block;
@@ -337,7 +273,7 @@ body::before {
     align-items: flex-start;
     margin-bottom: 18px;
     padding: 20px;
-    background: rgba(40, 40, 40, 0.6);
+    background: rgba(40,40,40,0.6);
     border-radius: 16px;
     border-left: 4px solid #2e7d32;
     transition: all 0.3s ease;
@@ -349,8 +285,8 @@ body::before {
 
 .work-step:hover {
     transform: translateX(3px);
-    background: rgba(50, 50, 50, 0.7);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    background: rgba(50,50,50,0.7);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
 
 .step-number {
@@ -366,7 +302,7 @@ body::before {
     font-size: 16px;
     margin-right: 15px;
     flex-shrink: 0;
-    box-shadow: 0 3px 10px rgba(46, 125, 50, 0.3);
+    box-shadow: 0 3px 10px rgba(46,125,50,0.3);
 }
 
 .step-text {
@@ -393,12 +329,12 @@ body::before {
 }
 
 .tech-item {
-    background: linear-gradient(135deg, rgba(46, 125, 50, 0.2), rgba(27, 94, 32, 0.3));
+    background: linear-gradient(135deg, rgba(46,125,50,0.2), rgba(27,94,32,0.3));
     padding: 12px 20px;
     border-radius: 50px;
     color: #4caf50;
     font-weight: 600;
-    border: 1px solid rgba(76, 175, 80, 0.3);
+    border: 1px solid rgba(76,175,80,0.3);
     transition: all 0.3s ease;
     font-size: 15px;
 }
@@ -407,7 +343,7 @@ body::before {
     background: linear-gradient(135deg, #2e7d32, #1b5e20);
     color: white;
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(46, 125, 50, 0.4);
+    box-shadow: 0 5px 15px rgba(46,125,50,0.4);
 }
 
 .social-links {
@@ -421,7 +357,7 @@ body::before {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: linear-gradient(135deg, rgba(40, 40, 40, 0.9), rgba(30, 30, 30, 0.9));
+    background: linear-gradient(135deg, rgba(40,40,40,0.9), rgba(30,30,30,0.9));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -429,28 +365,28 @@ body::before {
     font-size: 22px;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 
-        0 6px 20px rgba(0, 0, 0, 0.5),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1);
+    border: 2px solid rgba(255,255,255,0.15);
     backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
 }
 
 .social-icon:hover {
     transform: scale(1.15) translateY(-3px);
-    box-shadow: 
-        0 10px 30px rgba(0, 0, 0, 0.7),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255,255,255,0.2);
+    border-color: rgba(255,255,255,0.25);
 }
 
 .github {
     background: linear-gradient(135deg, #333, #24292e);
 }
 
+.telegram { 
+    background: linear-gradient(135deg, #0088cc, #006699);
+}
+
+/* Подвал */
 .footer-section {
-    padding: 40px 0 50px 0;
+    padding: 40px 0 50px;
     text-align: center;
     position: relative;
     z-index: 1;
@@ -458,10 +394,9 @@ body::before {
 
 .footer-text {
     text-align: center;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255,255,255,0.9);
     font-size: 14px;
     line-height: 1.6;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .footer-text p {
@@ -469,7 +404,7 @@ body::before {
 }
 
 .footer-text a {
-    color: rgba(255, 255, 255, 0.95);
+    color: rgba(255,255,255,0.95);
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -480,41 +415,15 @@ body::before {
 }
 
 .booking-block {
-    background: rgba(20, 20, 20, 0.85);
+    background: rgba(20,20,20,0.85);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     border-radius: 20px;
     padding: 25px;
     margin-bottom: 25px;
-    box-shadow: 
-        0 10px 30px rgba(0, 0, 0, 0.6),
-        inset 0 1px 0 rgba(255, 255, 255, 0.05),
-        0 0 0 1px rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.05), 0 0 0 1px rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
     position: relative;
     overflow: hidden;
-}
-
-.booking-block::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        45deg,
-        transparent 30%,
-        rgba(46, 125, 50, 0.08) 50%,
-        transparent 70%
-    );
-    z-index: 0;
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-
-.booking-block:hover::before {
-    opacity: 1;
 }
 
 .booking-text {
@@ -538,38 +447,18 @@ body::before {
     font-size: 17px;
     margin-top: 15px;
     transition: all 0.4s ease;
-    box-shadow: 
-        0 6px 20px rgba(46, 125, 50, 0.4),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 6px 20px rgba(46,125,50,0.4), inset 0 1px 0 rgba(255,255,255,0.1);
+    border: 2px solid rgba(255,255,255,0.15);
     position: relative;
     overflow: hidden;
     z-index: 1;
     width: 100%;
 }
 
-.booking-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
-    transition: left 0.6s;
-    z-index: -1;
-}
-
-.booking-btn:hover::before {
-    left: 100%;
-}
-
 .booking-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 
-        0 12px 30px rgba(46, 125, 50, 0.5),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 12px 30px rgba(46,125,50,0.5), inset 0 1px 0 rgba(255,255,255,0.2);
+    border-color: rgba(255,255,255,0.2);
 }
 
 .booking-btn i {
@@ -593,7 +482,6 @@ body::before {
     animation: fadeInUp 0.8s ease forwards;
 }
 
-/* Добавляем плавную прокрутку */
 html {
     scroll-padding-top: 80px;
     scroll-behavior: smooth;
@@ -603,21 +491,14 @@ html {
 @media (max-width: 768px) {
     body::before {
         opacity: 0.6;
-        background: 
-            linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
-            url('https://ltdfoto.ru/images/2026/02/05/FON_1.jpg') center/cover no-repeat;
     }
     
     .profile-card {
-        background: rgba(15, 15, 15, 0.8);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        background: rgba(15,15,15,0.8);
     }
     
     .content-block {
-        background: rgba(20, 20, 20, 0.8);
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
+        background: rgba(20,20,20,0.8);
     }
 }
 
@@ -666,7 +547,6 @@ html {
     
     .booking-block {
         padding: 20px;
-        border-radius: 16px;
     }
     
     .work-step, .service-item, .faq-item, .contact-item {
@@ -685,10 +565,6 @@ html {
         font-size: 14px;
     }
     
-    .step-text strong, .service-text strong, .faq-text strong, .contact-text strong {
-        font-size: 15px;
-    }
-    
     .booking-btn {
         padding: 16px;
         font-size: 16px;
@@ -698,40 +574,14 @@ html {
         padding: 10px 16px;
         font-size: 14px;
     }
-    
-    .tech-stack {
-        gap: 10px;
-    }
 }
 
 @media (min-width: 769px) {
     body::before {
         opacity: 0.4;
-        background: 
-            linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
-            url('https://ltdfoto.ru/images/2026/02/05/FON_1.jpg') center/cover no-repeat;
-    }
-    
-    .profile-card {
-        background: rgba(15, 15, 15, 0.9);
-    }
-    
-    .content-block {
-        background: rgba(20, 20, 20, 0.9);
     }
     
     .container {
         max-width: 420px;
     }
-}
-
-/* Исправления для предотвращения горизонтального скролла */
-body {
-    overflow-x: hidden;
-    width: 100%;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
 }
