@@ -11,6 +11,7 @@ body {
     color: #333;
     min-height: 100vh;
     position: relative;
+    overflow-x: hidden;
 }
 
 body::before {
@@ -276,12 +277,17 @@ body::before {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
+.service-item:last-child, .faq-item:last-child, .contact-item:last-child {
+    margin-bottom: 0;
+}
+
 .service-icon, .faq-icon, .contact-icon {
     min-width: 35px;
     color: #2e7d32;
     margin-top: 3px;
     font-size: 20px;
     text-shadow: 0 0 6px rgba(46, 125, 50, 0.3);
+    flex-shrink: 0;
 }
 
 .service-text, .faq-text, .contact-text {
@@ -303,7 +309,7 @@ body::before {
     color: #4caf50;
     font-weight: 700;
     font-size: 18px;
-    display: block;
+    display: inline-block;
     margin: 5px 0;
 }
 
@@ -323,6 +329,7 @@ body::before {
     color: rgba(255, 255, 255, 0.7);
     font-size: 14px;
     margin-top: 3px;
+    display: block;
 }
 
 .work-step {
@@ -334,6 +341,10 @@ body::before {
     border-radius: 16px;
     border-left: 4px solid #2e7d32;
     transition: all 0.3s ease;
+}
+
+.work-step:last-child {
+    margin-bottom: 0;
 }
 
 .work-step:hover {
@@ -389,6 +400,7 @@ body::before {
     font-weight: 600;
     border: 1px solid rgba(76, 175, 80, 0.3);
     transition: all 0.3s ease;
+    font-size: 15px;
 }
 
 .tech-item:hover {
@@ -431,10 +443,6 @@ body::before {
         0 10px 30px rgba(0, 0, 0, 0.7),
         inset 0 1px 0 rgba(255, 255, 255, 0.2);
     border-color: rgba(255, 255, 255, 0.25);
-}
-
-.telegram { 
-    background: linear-gradient(135deg, #0088cc, #006699);
 }
 
 .github {
@@ -537,6 +545,7 @@ body::before {
     position: relative;
     overflow: hidden;
     z-index: 1;
+    width: 100%;
 }
 
 .booking-btn::before {
@@ -568,11 +577,7 @@ body::before {
     font-size: 22px;
 }
 
-html {
-    scroll-padding-top: 80px;
-    scroll-behavior: smooth;
-}
-
+/* Анимации */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -586,6 +591,12 @@ html {
 
 .profile-card, .content-block, .booking-block {
     animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Добавляем плавную прокрутку */
+html {
+    scroll-padding-top: 80px;
+    scroll-behavior: smooth;
 }
 
 /* Адаптивность */
@@ -670,11 +681,11 @@ html {
         margin-right: 12px;
     }
     
-    .step-text {
+    .step-text, .service-text, .faq-text, .contact-text {
         font-size: 14px;
     }
     
-    .step-text strong {
+    .step-text strong, .service-text strong, .faq-text strong, .contact-text strong {
         font-size: 15px;
     }
     
@@ -686,6 +697,10 @@ html {
     .tech-item {
         padding: 10px 16px;
         font-size: 14px;
+    }
+    
+    .tech-stack {
+        gap: 10px;
     }
 }
 
@@ -704,4 +719,19 @@ html {
     .content-block {
         background: rgba(20, 20, 20, 0.9);
     }
+    
+    .container {
+        max-width: 420px;
+    }
+}
+
+/* Исправления для предотвращения горизонтального скролла */
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
