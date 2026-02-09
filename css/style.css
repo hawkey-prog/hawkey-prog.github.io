@@ -24,6 +24,7 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    background: #ffffff;
 }
 
 .profile-card {
@@ -45,11 +46,11 @@ body {
     border: 4px solid #ffffff;
     object-fit: cover;
     margin-bottom: 20px;
-    transition: transform 0.3s;
 }
 
 .avatar:hover {
     transform: scale(1.05);
+    transition: transform 0.3s;
 }
 
 .profile h1 {
@@ -103,7 +104,6 @@ body {
 .btn-secondary {
     background: #2e7d32;
     color: white;
-    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .btn-secondary:hover {
@@ -114,6 +114,7 @@ body {
 /* Основной контент */
 .main-content {
     padding-bottom: 40px;
+    background: #ffffff;
 }
 
 .content-block, .booking-block {
@@ -122,11 +123,11 @@ body {
     padding: 25px;
     margin-bottom: 20px;
     box-shadow: 0 5px 20px rgba(27, 94, 32, 0.15);
-    transition: transform 0.3s;
 }
 
 .content-block:hover, .booking-block:hover {
     transform: translateY(-5px);
+    transition: transform 0.3s;
 }
 
 .content-block h2, .booking-block h2 {
@@ -149,7 +150,6 @@ body {
     margin-bottom: 15px;
     background: #2e7d32;
     border-radius: 12px;
-    border-left: 4px solid #4caf50;
 }
 
 .service-icon, .faq-icon, .contact-icon {
@@ -204,7 +204,6 @@ body {
     margin-bottom: 15px;
     background: #2e7d32;
     border-radius: 12px;
-    border-left: 4px solid #4caf50;
 }
 
 .step-number {
@@ -235,7 +234,6 @@ body {
 /* Блок бронирования */
 .booking-block {
     text-align: center;
-    background: #1b5e20;
 }
 
 .booking-block p {
@@ -256,8 +254,6 @@ body {
     font-weight: 600;
     font-size: 17px;
     transition: all 0.3s;
-    border: none;
-    cursor: pointer;
 }
 
 .booking-btn:hover {
@@ -291,12 +287,10 @@ body {
     font-size: 22px;
     text-decoration: none;
     transition: all 0.3s;
-    border: 2px solid #1b5e20;
 }
 
 .social-icon:hover {
-    background: #ffffff;
-    color: #1b5e20;
+    background: #2e7d32;
     transform: scale(1.1);
 }
 
@@ -317,7 +311,6 @@ body {
 .footer-section a {
     color: #1b5e20;
     text-decoration: none;
-    font-weight: 500;
 }
 
 .footer-section a:hover {
@@ -354,9 +347,5 @@ body {
         width: 45px;
         height: 45px;
         font-size: 20px;
-    }
-    
-    .content-block h2, .booking-block h2 {
-        font-size: 18px;
     }
 }
